@@ -30,3 +30,35 @@ print(list3)  #[1, 4, 9]
 # but generator can be iterated only once
 for i in list3:
     print(i)  #1 4 9 
+
+#generator for reading line one by one using yield keyword
+def read_file_line_by_line(file_path):
+    with open(file_path, 'r') as fileptr:
+        for line in fileptr:
+            yield line.strip()  #strip() removes leading/trailing whitespace/newline characters     
+file_path = 'test.txt'  #make sure this file exists with some content
+line_generator = read_file_line_by_line(file_path)
+for line in line_generator:
+    print(line)  #prints each line from the file one by one
+#once all lines are read, it raises StopIteration exception
+
+
+#we can also use next() to get the next line
+line_gen = read_file_line_by_line(file_path)
+print(next(line_gen))  #prints first line
+print(next(line_gen))  #prints second line
+print(next(line_gen))  #prints third line
+#and so on until all lines are read
+print(next(line_gen))  #raises StopIteration exception if no more lines
+
+
+#we can also use try-except to handle StopIteration exception
+line_gen2 = read_file_line_by_line(file_path)
+try:
+    while True:
+        print(next(line_gen2))  #prints each line until StopIteration
+except StopIteration:
+    print("All lines read, StopIteration exception caught.")
+#once all lines are read, it raises StopIteration exception
+#we can also convert generator to list using list() function
+line_gen3 = read_file_line_by_line(file_path)

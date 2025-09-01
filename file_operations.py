@@ -2,7 +2,7 @@ file1 = "test1.txt"
 fileptr = open(file1, 'w')  # Open file in write mode
 fileptr.write("Hello, World!\n")  # Write to file
 fileptr.write("This is a test file.\n")
-fileptr.close()  # Close the file
+#fileptr.close()  # Close the file
 # Append mode  
 fileptr = open(file1, 'a')  # Open file in append mode
 fileptr.write("Appending a new line.\n")  # Append to file
