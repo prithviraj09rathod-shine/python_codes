@@ -27,7 +27,9 @@ class Solution:
     
     def containsDuplicate3(self, nums: list[int]) -> bool:
         return len(nums) != len(set(nums))
+    
 
 print(Solution().containsDuplicate0([1,2,3,1]))
-#print(Solution().containsDuplicate([1,2,3,4]))
-#print(Solution().containsDuplicate2([1,1,1,3,3,4,3,2,4,2]))
+print(Solution().containsDuplicate([1,2,3,4]))
+print(Solution().containsDuplicate2([1,1,1,3,3,4,3,2,4,2]))
+
