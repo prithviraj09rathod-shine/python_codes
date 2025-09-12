@@ -1,9 +1,13 @@
 #check iftwo strings are anagrams are not
 def are_anagrans(str1, str2):
     # Remove spaces and convert to lowercase
-    str1 = str1.replace(" ", "").lower()
+    """ str1 = str1.replace(" ", "").lower()
     print(str1)
     str2 = str2.replace(" ", "").lower()
+    print(str2) """
+    str1 = str1.lower().replace(" ", "")
+    print(str1)
+    str2 = str2.lower().replace(" ", "")
     print(str2)
     # If lengths differ, they cannot be anagrams
     if len(str1) != len(str2):
