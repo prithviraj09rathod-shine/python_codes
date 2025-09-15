@@ -27,7 +27,7 @@ class solution1:
                     return [i, j]
                 return []
 
-#best way using two pointer approach for already sorted array.   
+#Optimized:best way using two pointer approach for already sorted array.   
 class solution2:
     def twoSum2(self, nums:List[int], target:int)->list[int]:
        l, r = 0, len(nums) - 1

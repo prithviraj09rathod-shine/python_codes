@@ -7,6 +7,7 @@ class Solution:
             if nums[i] == nums[i-1]:
                 return True
         return False
+    
     def containsDuplicate1(self, nums: list[int]) -> bool:
         for i in range(1, len(nums)):
             for j in range(i+1, len(nums)):
@@ -25,6 +26,7 @@ class Solution:
             num_set.add(num)
         return False
     
+    #Best single line code
     def containsDuplicate3(self, nums: list[int]) -> bool:
         return len(nums) != len(set(nums))
     

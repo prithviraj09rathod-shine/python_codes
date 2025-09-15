@@ -17,6 +17,7 @@ class solution:
             r-=1    
         return True
     
+    #short solution
     def isPalindrome1(self, s:str)->bool:
         print(s)
         #print(s.lower()) // converting to lower case
