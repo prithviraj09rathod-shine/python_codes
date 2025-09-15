@@ -13,7 +13,6 @@ def non_repeating_char(s):
     for char in s:
         if char_count[char] == 1:
             return char
-    
     return None
 
 def first_non_repeating_char1(s):
@@ -39,4 +38,4 @@ def non_repeating_char1(s):
 s = "swiss"
 print(non_repeating_char(s))  # Output: "w"
 s = "relevel"
-print(non_repeating_char1(s))  # Output: "r"
+print(non_repeating_char1(s))  # Output: ['r', 'v']

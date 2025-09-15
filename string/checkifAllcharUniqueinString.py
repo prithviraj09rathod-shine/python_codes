@@ -4,7 +4,7 @@ def checkIfAllCharUniqueinString(s):
         if char in char_set:
             return False
         char_set.add(char)
-    return True 
+    return True
 
 def checkIfAllCharUniqueinString1(s):
     return len(s) == len(set(s))
@@ -14,3 +14,5 @@ s = "abcdefg"
 print(checkIfAllCharUniqueinString(s))  # Output: True
 s = "hello"
 print(checkIfAllCharUniqueinString1(s))  # Output: False
+
+
