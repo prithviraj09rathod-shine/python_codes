@@ -1,5 +1,14 @@
 class solution:
     def removeDuplicates(self, string1: str) -> str:
+        word = "banana"
+        result = ""
+        for char in word:
+            if char not in result:
+                result += char
+        #print(result)
+        return result
+    
+    def removeDuplicates7(self, string1: str) -> str:
             if len(string1) != len(set(string1)) :
                 print("Duplicates found")
                 return str(set(string1))
@@ -7,12 +16,12 @@ class solution:
                 print("No duplicates found")
                 return string1
 
-    def removeDuplicateChars(self, string1: str) -> str:
+    def removeDuplicateChars8(self, string1: str) -> str:
             result =""
             string_set = set()
             #print(string_set())
             for char in string1:
-                #print(char)
+                print(char)
                 if not char in string_set:
                     string_set.add(char)
                     result+=char       
@@ -30,4 +39,4 @@ class solution:
 
 #print(solution().removeDuplicates("Reshma"))
 #print(solution().removeDuplicateChars("banana")) 
-print(solution().removeDuplicateChars2("banana"))   
+print(solution().removeDuplicates("banana"))   

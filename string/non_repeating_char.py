@@ -17,7 +17,7 @@ def non_repeating_char(s):
 
 def first_non_repeating_char1(s):
     freq = Counter(s)
-    #freq = dict(Counter(s))
+    freq = dict(Counter(s))
     print(freq)
     for char in s:
         if freq[char] == 1:
@@ -28,6 +28,7 @@ def non_repeating_char1(s):
     result_list = []
     freq = Counter(s)
     #freq = dict(Counter(s))
+    print("dict counter")
     print(freq)
     for char in s:
         if freq[char] == 1:
