@@ -7,12 +7,12 @@ class ListNode:
 class solution:
     def removeElements(self, head:ListNode, val:int)->ListNode:
         dummy = ListNode(next=head) #inserted just before the head
-        pre, curr = dummy, head
+        prev, curr = dummy, head
 
         while curr:
             temp = curr.next
             if curr.val == val:
-                prev = temp
+                prev.next = temp
             else:
                 prev = curr
             

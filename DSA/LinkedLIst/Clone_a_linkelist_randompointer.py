@@ -35,7 +35,35 @@ def clone_linked_list(head):
         clone = clone.next
 
     return clone_head
+###################################
+#simple way to copy ll with random pointer using hashmap
+def clone_linked_list_hashmap(head):
+    if not head:
+        return None
 
+    old_to_new = {}
+
+    # First pass: create all nodes and store them in the hashmap
+    current = head
+    while current:
+        copy = Node(current.data) ## create new node amd do deepcopy of data
+        old_to_new[current] = copy
+        current = current.next
+
+    # Second pass: assign next and random pointers
+    current = head
+    while current:
+        copy = old_to_new[current]
+        if current.next:
+            #copy = old_to_new[current] # will give the copied node
+            copy.next = old_to_new[current.next] # next of original node i.e current.next will give the next node of copied node i.e copy
+            #old_to_new[current].next = old_to_new[current.next]
+        if current.random:
+            #old_to_new[current].random = old_to_new[current.random]
+            copy.random = old_to_new[current.random]
+        current = current.next
+
+    return old_to_new[head]
 # Create original list: 1 → 2 → 3
 a = Node(1)
 b = Node(2)
@@ -47,9 +75,10 @@ b.next = c
 a.random = c
 b.random = a
 c.random = b
-
+ 
 # Clone the list
-cloned_head = clone_linked_list(a)
+#cloned_head = clone_linked_list(a)
+cloned_head = clone_linked_list_hashmap(a)
 
 # Print cloned list
 def print_list(head):

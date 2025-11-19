@@ -49,5 +49,6 @@ a.next = b
 b.next = c
 c.next = d
 d.next = b  # Cycle here
+#d.next = None  # No cycle
 
 print("Cycle detected:", obj.hasCycle(a))  # ➜ True

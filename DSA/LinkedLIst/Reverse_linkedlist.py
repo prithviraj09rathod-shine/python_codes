@@ -9,7 +9,7 @@ class solution:
         prev = next = None
         curr = head
         #TC:O(n) and SC:O(1)
-        while curr and curr.next:
+        while curr:
             next = curr.next
             curr.next = prev
             prev = curr
@@ -18,13 +18,14 @@ class solution:
 
     #Tc:o(n), sc:o(n) beacuse for n nodes there will be n recursive calls
     def reverse_list_recursive(self, head: LinkedList)->LinkedList:
-        if not head:
+        if not head or head.next:
             return None
 
-        newHead = head
-        if head.next :
-            newHead = self.reverse_list(head.next)
-            head.next.next = head
+        #newHead = head
+        
+        newHead = self.reverse_list(head.next)
+        
+        head.next.next = head
         head.next = None
         return newHead
 
@@ -48,7 +49,9 @@ print_list(head)
 
 # Reverse it
 reversed_head = obj.reverse_list(head)
+#reversed_head1 = obj.reverse_list_recursive(head)
 print("=====")
 print("Reversed Linked List:")
 print_list(reversed_head)
+#print_list(reversed_head1)
 

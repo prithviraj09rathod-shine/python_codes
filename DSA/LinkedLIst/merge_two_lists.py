@@ -39,5 +39,22 @@ class Solution:
 
         return dummy.next
 obj = Solution()
-print(obj.mergeTwoLists())
-print(obj.mergeTwoLists_Itr())
+# example usage: build two sorted lists and merge them
+# list1: 0 → 1 → 2 → 3 → 4
+head1 = ListNode(0)
+tail = head1
+for i in range(1, 5):
+    tail.next = ListNode(i)
+    tail = tail.next
+
+# list2: 2 → 3 → 4 → 5 → 6
+head2 = ListNode(2)
+tail = head2
+for i in range(3, 7):
+    tail.next = ListNode(i)
+    tail = tail.next
+
+merged_list = obj.mergeTwoLists_Itr(head1, head2)
+while merged_list:
+    print(merged_list.val, end=' → ' if merged_list.next else '')
+    merged_list = merged_list.next
