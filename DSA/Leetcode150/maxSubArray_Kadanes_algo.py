@@ -37,7 +37,7 @@ class solution:
     
 obj = solution()
 print(obj.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])) #6
-print(obj.maxSubArray1([-2,1,-3,4,-1,2,1,-5,4])) #6
+#print(obj.maxSubArray1([-2,1,-3,4,-1,2,1,-5,4])) #6
 #Output: Subarray indices: start=3, end=6
 #Output: 6
-print(obj.maxSubArray([-1])) #-1
+#print(obj.maxSubArray([-1])) #-1

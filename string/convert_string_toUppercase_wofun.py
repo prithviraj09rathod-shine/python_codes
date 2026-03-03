@@ -12,10 +12,10 @@ def convertoUpperCase_wofun(s):
 
 def converttoUpperCase(s):
     result = s.upper()
-    print(result) 
+    #print(result) 
     return result
 
 # Example usage:
 s = "Hello, World!"
 print(convertoUpperCase_wofun(s))  # Output: "HELLO,
-print(convertoUpperCase_wofun("python3.8"))  # Output: "PYTHON3.8"
+print(converttoUpperCase("python3.8"))  # Output: "PYTHON3.8"

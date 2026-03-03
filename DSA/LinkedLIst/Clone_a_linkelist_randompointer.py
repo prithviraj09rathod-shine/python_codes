@@ -35,6 +35,7 @@ def clone_linked_list(head):
         clone = clone.next
 
     return clone_head
+
 ###################################
 #simple way to copy ll with random pointer using hashmap
 def clone_linked_list_hashmap(head):

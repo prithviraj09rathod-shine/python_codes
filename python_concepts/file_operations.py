@@ -49,8 +49,8 @@ try:
         print(content)
 except PermissionError:
     print("Error: Permission denied.")
-
-# Handling other IO errors
+'''
+#Handling other IO errors
 try:
     with open("/invalid_path/file.txt", 'r') as fileptr:
         content = fileptr.read()
@@ -67,14 +67,45 @@ except Exception as e:
     print(f"An error occurred: {e}")
 
 # Always ensure files are closed properly
+""" print("start of the try , except diff exceptions and final block")
 fileptr = None
 try:
-    fileptr = open("yet_another_non_existent_file.txt", 'r')
+    fileptr = open("test.txt", 'r')
     content = fileptr.read()
+    print("print the test file content")
     print(content)
+except EOFError as e1:
+    print(f"End of File Error: {e1}")
+except IOError as ioe:
+    print(f"IO Error: {ioe}")
 except Exception as e:
-    print(f"An error occurred: {e}")
-finally:
+    print(f"An error occurred while opening the test file: {e}")
+finally:    
     if fileptr:
-        fileptr.close()
-'''
+        fileptr.close() """
+
+def read_file(filepath):
+    try:
+        print("Start of the try block")
+        with open(filepath, 'r') as file:
+            content = file.read()
+            print("File content:\n", content)
+    except FileNotFoundError:
+        print(f"Error: File not found at path '{filepath}'")
+    except IOError as e:
+        print(f"IOError: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        print("End of try-except-finally block")
+
+# ✅ Update these paths to actual existing files on your system
+""" file_paths = [
+    "D:/CODE/python_codes/python_concepts/test.txt",
+    "D:/CODE/python_codes/python_concepts/valid_file.txt"
+] """
+
+# Example file paths (update these paths as needed)
+file_paths = ["test1.txt", "test2.txt", "non_existent_file.txt"]
+for path in file_paths:
+    read_file(path)

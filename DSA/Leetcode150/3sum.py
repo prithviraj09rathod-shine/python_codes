@@ -31,15 +31,17 @@ class solution:
                     # Skip duplicates for left and right
                     while left<right and array[left] == array[left+1]:
                         left+=1
-                    while left<right and array[right] == array[right-1]:
-                        right+=1
+                    #optimization removed for right pointer and added below
+                    """ while left<right and array[right] == array[right-1]:
+                        right+=1 """
 
                     left+=1
-                    right-=1
+                    #right-=1
         return res
 
 obj = solution()
 nums = [-1,2,1,0,3,2,0]
 print(obj.threesum(nums))
+print("+++++++++++++++++++++++++++++++")
 num1 = [-1, 0, 1, 2, -1, -4]
 print(obj.threesum(num1))

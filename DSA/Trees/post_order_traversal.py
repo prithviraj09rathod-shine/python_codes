@@ -23,5 +23,7 @@ class solution:
                     stack.append(curr.right)
                     visit.append(False)
                     stack.append(curr.left)
-                    visit.append{False}
+                    visit.append(False)
+list1 = []
+obj = solution.post_order_traversal(list1)
 

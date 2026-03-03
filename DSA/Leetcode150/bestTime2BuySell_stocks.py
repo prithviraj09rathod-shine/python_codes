@@ -13,7 +13,7 @@ class Solution:
         buy = prices[0]
         for p in prices:
             buy = min(buy,p)
-            profit = max(profit, p-buy  )
+            profit = max(profit, p-buy)
         return profit
     
 #Example usage:

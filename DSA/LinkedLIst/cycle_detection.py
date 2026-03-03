@@ -36,8 +36,29 @@ class Solution:
             if slow == fast:
                 return True
         return False
+    
+    def isHappy_num(self, n:int)->bool:
+        def get_next(number):
+            total_sum = 0
+            while number > 0:
+                digit = number % 10
+                total_sum += digit ** 2
+                number //= 10
+            return total_sum
+
+        slow = n
+        fast = get_next(n)
+
+        while fast != 1 and slow != fast:
+            slow = get_next(slow)
+            fast = get_next(get_next(fast))
+
+        return fast == 1
 
 obj = Solution()   
+print(obj.isHappy_num(19)) # True
+print(obj.isHappy_num(2)) #False
+
 # Create nodes
 a = ListNode(1)
 b = ListNode(2)
@@ -51,4 +72,4 @@ c.next = d
 d.next = b  # Cycle here
 #d.next = None  # No cycle
 
-print("Cycle detected:", obj.hasCycle(a))  # ➜ True
+#print("Cycle detected:", obj.hasCycle(a))  # ➜ True

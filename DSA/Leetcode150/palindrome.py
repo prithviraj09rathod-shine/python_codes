@@ -5,12 +5,12 @@ class solution:
     def isPalindrome(self, s:str)->bool:
         l,r = 0,len(s)-1
         while l<r:
-            if not s[l].isalnum():
+            """ if not s[l].isalnum():
                 l+=1
                 continue
             if not s[r].isalnum():
                 r-=1
-                continue
+                continue """
             if s[l].lower() != s[r].lower():
                 return False
             l+=1
@@ -22,13 +22,14 @@ class solution:
         print(s)
         #print(s.lower()) // converting to lower case
         #print(s.replace(" ","")) // removing spaces at the beginning
-        s.lower().replace(" ","")
+        s.lower().replace("  ","")
         print(s)
         return s==s[::-1]
 #Example usage:
-solution().isPalindrome
+#solution().isPalindrome
 #str = ""
 print(solution().isPalindrome1("MA D A M"))
-print(solution().isPalindrome("Reshma"))
+print(solution().isPalindrome1(" A MRARM A"))
+#print(solution().isPalindrome("AMRARMA"))
 
         

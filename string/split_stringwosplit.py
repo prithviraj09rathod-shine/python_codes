@@ -10,6 +10,7 @@ def split_string_without_split(s):
                 current_word = []
         else:
             current_word.append(char)
+            
     
     if current_word:  # Add the last word if there is one
         words.append(''.join(current_word))

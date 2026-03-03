@@ -24,8 +24,14 @@ def search_rotated_array(nums, target):
 
     return -1  # Target not found
 
-array = [3,4,5,6,0,1,2] # 7,
+array = [3,4,5,6,0,1,2] # index 4 is the answer,
 target = 0
 print(search_rotated_array(array, target))
+array1 = [4,5,6,7,0,1,2] #not found case
+target1 = 3
+print(search_rotated_array(array1, target1))
+array2 = [4,5,6,7,0,1,2,3] # index 5 is the answer
+target2 = 1
+print(search_rotated_array(array2, target2))
 
 

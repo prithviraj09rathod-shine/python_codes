@@ -13,3 +13,9 @@ class Solution:
                 stack.append(c)
 
         return True if not stack else False
+
+object = Solution()
+print(object.isValid("()"))          # True
+print(object.isValid("()[]{}"))      # True
+print(object.isValid("(]"))          # False
+print(object.isValid("([)]"))        # False

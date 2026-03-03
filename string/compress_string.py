@@ -10,6 +10,6 @@ def compress_string(s):
 
 # Example usage:
 s = "aaabbbccdaa"
-print(compress_string(s))  # Output: "a3b3c2d1a2"
+print(compress_string(s))  # Output: "a3 b3 c2 d1 a2"
 s = "abcd"
 #print(compress_string(s))  # Output: "a1b1c1d1

@@ -6,14 +6,14 @@ class LinkedList:
         self.next = next
 class solution:
     def reverse_list(self, head:LinkedList)->LinkedList:
-        prev = next = None
+        prev = nxt = None
         curr = head
         #TC:O(n) and SC:O(1)
         while curr:
-            next = curr.next
+            nxt = curr.next
             curr.next = prev
             prev = curr
-            curr = next
+            curr = nxt
         return prev
 
     #Tc:o(n), sc:o(n) beacuse for n nodes there will be n recursive calls

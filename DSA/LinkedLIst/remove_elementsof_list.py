@@ -19,6 +19,22 @@ class solution:
             curr = temp
         return dummy.next
     
+
+class solution:
+    def removeElements(self, head:ListNode, val:int)->ListNode:
+        dummy = ListNode(next=head) #inserted just before the head
+        prev, curr = dummy, head
+
+        while curr:
+            #temp = curr.next
+            if curr.val == val:
+                prev.next = curr.next
+            else:
+                prev = curr
+            
+             #curr = temp
+            curr = curr.next
+        return dummy.next
 #obj= solution()
 
 def print_list(head):

@@ -14,7 +14,7 @@ class solution:
             leftPrev =curr
             curr = curr.next
         
-        #Now curr="left" and leftPrev="node before theleft"
+        #Now curr="left" and leftPrev="node before the left"
         # 2.reverse the list from left to right
         prev = None
         for i in range(len):

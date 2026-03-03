@@ -23,7 +23,7 @@ def are_anagrans1(str1, str2):
 
 # Example usage
 string1 = "Liste n"
-string2 = "Silen t"
+string2 = "Sil en t"
 
 string3 = "Hello"
 result = are_anagrans(string1, string2)

@@ -1,5 +1,5 @@
 
-#Dutch National Flag algo
+#Dutch National Flag algo with time complexity O(n) and space complexity O(1)
 def dutch_national_flag(arr):
     low = mid = 0
     high = len(arr) - 1
@@ -16,9 +16,9 @@ def dutch_national_flag(arr):
             high -= 1
     return arr
 
-#normal way of counting
+#normal way of counting initialising with time complexity O(n) and space complexity O(1)
 def sort_012(arr):
-    count = {0: 0, 1: 0, 2: 0}
+    count = {0: 0, 1: 0, 2: 0} #dictionary to hold counts
 
     # Count occurrences
     for num in arr:
@@ -33,7 +33,7 @@ def sort_012(arr):
 
     return arr
 
-#normal way of counting
+#normal way of counting using collections.Counter with time complexity O(n) and space complexity O(1)
 from collections import Counter
 
 def sort_012_counter(arr):

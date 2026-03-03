@@ -20,6 +20,7 @@ class solution:
                     right-=1
                 else:
                     res.append([a, nums[left], nums[right]])
+                    ###This is optimization to skip duplicates and for rightt pointer anways sum will be higher so automatically decremented
                     left += 1
                     while nums[left] == nums[left-1] and left<right:
                         left+=1

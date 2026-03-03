@@ -3,7 +3,7 @@
 #You can return the answer in any order.
 from typing import List
 
-#better approach using hashmap
+#better approach using hashmap using time complexity O(n) and space complexity O(n)
 class solution:
     def twoSum(self, nums:List[int], target:int)->list[int]:
         hashmap_seen = {}
@@ -12,13 +12,13 @@ class solution:
             if complement in hashmap_seen:
                 print("hashmap_seen:")
                 print(hashmap_seen)
-                return [hashmap_seen[complement], i]
+                return [hashmap_seen[complement], i] #result is a list of indices
             hashmap_seen[nums[i]] = i
             print("hashmap_seen outside if block:")
             print(hashmap_seen)
         return []
 
-#traditional brute force approach
+#traditional brute force approach with time complexity O(n^2) and space complexity O(1)
 class solution1:
     def twoSum1(self, nums:List[int], target:int)->list[int]:
         for i in range(len(nums)):
@@ -27,7 +27,7 @@ class solution1:
                     return [i, j]
                 return []
 
-#Optimized:best way using two pointer approach for already sorted array.   
+#Optimized:best way using two pointer approach for already sorted array. with time complexity O(n) and space complexity O(1)   
 class solution2:
     def twoSum2(self, nums:List[int], target:int)->list[int]:
        l, r = 0, len(nums) - 1

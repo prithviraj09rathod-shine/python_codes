@@ -62,3 +62,5 @@ except StopIteration:
 #once all lines are read, it raises StopIteration exception
 #we can also convert generator to list using list() function
 line_gen3 = read_file_line_by_line(file_path)
+
+
